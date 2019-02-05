@@ -1,0 +1,12 @@
+-OPT silentInstallLicenseAcceptance="true"
+-OPT allowNonRootSilentInstall="true"
+-OPT disableNonBlockingPrereqChecking="true"
+-OPT checkFilePermissions="true"
+-OPT installType="installNew"
+-OPT profileType="none"
+-OPT feature="languagepack.server.all"
+-OPT PROF_enableAdminSecurity="false"
+-OPT PROF_adminUserName=
+-OPT PROF_adminPassword=
+#-OPT installLocation="/software/IBM/WebSphere3/AppServer"
+-OPT installLocation="C:/IBMtest/WebSphere/AppServer"

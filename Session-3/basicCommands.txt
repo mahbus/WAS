@@ -1,0 +1,51 @@
+DMGR
+****
+startManger.bat
+stopManager.bat
+
+ if secuirty=enabled then pass credentails
+ stopManager.bat  -username ***** -password *******
+
+NodeAgent
+*********
+
+startNode.bat
+stopNode.bat 
+
+if secuirty=enabled then
+ stopNode.bat  -username ***** -password *******
+
+ Server1
+ *******
+
+startServer.bat server1
+stopServer.bat server1
+
+if secuirty=enabled then
+ stopServer.bat server1  -username ***** -password *****
+
+ status of serverstatus
+ **********************
+ serverStatus.bat -all 
+
+if secuirty=enabled then
+ serverStatus.bat -all  -username ***** -password *****
+
+
+Federation
+
+addNode.bat <DMGR HOSTNAME> <DMGR SOAP ADDRESS CONNECTOR PORT> -username ***** -password *****  -includeapps -includebuses
+
+Defederation
+
+removeNode.bat
+
+
+http://www.gmail.com
+
+protocal
+hostname
+port
+context root
+
+http://localhost:9072/ibm/console

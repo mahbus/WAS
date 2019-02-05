@@ -1,0 +1,5 @@
+-OPT rootUserHasRunSlibcleanCommandSuccessfully="true"
+-OPT checkFilePermissions="true"
+-W maintenance.package="/software/IBM/source/source/7.0.0.17/7.0.0-WS-WAS-AixPPC64-FP0000017.pak;/software/IBM/source/source/7.0.0.17/7.0.0-WS-WASSDK-AixPPC64-FP0000017.pak"
+-W product.location="/software/IBM/WebSphere3/AppServer"
+-W update.type="install"

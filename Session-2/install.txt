@@ -1,0 +1,60 @@
+two types of installations
+
+1. silent  CUI
+
+install.bat -options E:\WAS7\docs\Session-2\installResponse.txt -silent          - windows
+
+install.sh -options E:\WAS7\docs\Session-2\installResponse.txt -silent          - non windows
+
+
+/software/IBM/source/source/WAS7/WAS/install.sh  -options /software/IBM/source/source/responsefiles/WAS7_Install.txt -silent
+/software/IBM/source/source/7.0.0.17/UPDI/UpdateInstaller/install  -options  /software/IBM/source/source/responsefiles/UPDI_Install.txt  -silent
+
+/software/IBM/WebSphere3/UpdateInstaller/update.sh -options /software/IBM/source/source/responsefiles/WAS7017_install.txt -silent
+
+
+
+2. GUI
+
+windows  - install.bat
+
+Non- Windows
+
+xmanager or xshell  or xming or connectionmanager or xterm   - 3rd party s/w used to connect remote systems 
+
+windows (putty) --- unix (WAS)   ---> Network 
+
+1.SSH - X11 forwarding should be enbaled in OS
+2.export DISPLAY=127.0.0.1:0.0
+3.install.sh
+
+
+startServer.bat JVMname
+startServer.bat -help
+stopServer.bat JVMname -username **** -password ***
+serverStatus.bat JVMname -all -username **** -password ***
+
+How to frame an Application/Admin console URL
+
+protocal -- http/https
+hostname  -  where the servere is hosted 
+port       -  which jvm you want to invoke 
+context root  - In that JVM which application you want to access 
+
+How to identiry ports 
+
+C:\IBMTomi\WebSphere\AppServer\profiles\AppSrv01\config\cells\HDSLA00130Node01Cell\nodes\AppSrv-01\serverindex.xml
+
+C:\IBMTomi\WebSphere\AppServer\profiles\AppSrv01\properties\portdef.properties
+
+
+http://localhost:9060/ibm/console   - DMGR/Appsrvr
+
+
+
+
+
+
+
+windows (my machin) ----? non-win(aix abhinav US)
+putty ------------------> murthy.com

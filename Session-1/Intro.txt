@@ -1,0 +1,74 @@
+Development  ---> Testing (Signoff)---> UAT(Signoff) ----->Pre-prod(Mirror)------->Production(Down reason may be some 
+  <-----------------------------------------
+
+
+User Acceptance Team --Customer (Walmart Assosiate)
+
+WWW.walmart.com (Production is just like live env)
+
+PP --
+
+APP Server profile   (Standalone profile which is dedicatedly used by development team)   - Development
+
+Airtel   - Postaid  prepaid  dth broadband
+
+            AppSrv1  Appsrv2  Appsrv3 Appsrv4
+
+1. Deploy application all the servers ( 1jvm*5min = 5min) (4jvm*5=20min)
+
+2. restart all the 4 jvms at a time ( 1jvm*5min = 5min) (4jvm*5=20min)
+
+
+DMGR Profile - Deployment manager profile
+
+				  ADD
+Appsrv1 Appsrv2 Appsrv3 Appsrv4  -------> DMGR ( POC for all your 4 APpserver profiles) ---DMGR COncole (steps 1&2 can be performed at a time - 5 mins)
+
+6.1
+Cell Profile  - Comination of DMGR + Appsrv(Add)
+
+www.gmail.com
+
+gmail is serving  my system (4 GB RAM) -- Appsrv1 -  JVM1  (per min we may get 10000 requests ?) 250 req
+
+                                                     JVM2   250 req  (DOWN because of some reason)
+
+                                                     JVM3   250 req
+
+                                                     JVM4   250 req
+
+
+Group up  the 4 jvms together ----> Cluster    1. WLM (Work Load mgt policy)  - it is distbuting the load among all your cluster members(jvms)
+
+                                               2. Failover
+
+2 types of clusters
+
+1. VC    - Vertical Clustering   ---> JVM 1 JVM2 JVM3 JVM4 were installed on same machine and if you club together then it can be called as VC
+
+adv
+1. Chep
+
+disadv
+
+1. hard disk crashed - 4 jvms down 
+
+2. HC    - Horizontal Clustering  ---->  JVM1 is installed in my machine , JVM2 is installed in raj machine , JVM3 is installed in abhinav machine and JVM4 is installed in Cm machine , if i club all these JVMs which are disrtbuted in the network then it can called as HC
+
+adv 
+
+1. if one machine hard disk is crashed , other 3 jvms machines are fine ..it is going to do failover job 
+
+disadv
+
+1. expensive 
+
+
+
+
+
+
+
+
+
+
